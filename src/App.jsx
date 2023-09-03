@@ -52,14 +52,14 @@ function App() {
   return (
     <>
       <div className="row">
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           <form className="p-3 bg-dark text-white m-3 rounded" >
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
               <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='name' onChange={onChangeHanlder} />
             </div>
             <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">Fecha de cumpleaños</label>
+              <label htmlFor="exampleInputPassword1" className="form-label">Fecha de Naciemiento</label>
               <input type="date" className="form-control" id="exampleInputPassword1" name='dateOfBirth' onChange={onChangeHanlder} />
             </div>
             <div className="mb-3">
@@ -69,7 +69,7 @@ function App() {
             <button onClick={addPersonHandler} type="submit" className="btn btn-primary">save</button>
           </form>
         </div>
-        <div className="col-6">
+        <div className="col-12 col-md-6">
           {
             personList.map(( person )=>{
               return <div key={uuid()} className="card mb-3 m-3" style={{ maxWidth: '540px' }}>
